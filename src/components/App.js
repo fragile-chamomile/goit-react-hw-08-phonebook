@@ -1,23 +1,30 @@
-import { Container, HeroTitle } from './App.styled';
-import { RiContactsBookLine } from 'react-icons/ri';
+import { lazy, Suspense } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-import ContactForm from './ContactForm/ContactForm';
-import Filter from './Filter/Filter';
-import ContactList from './ContactList/ContactList';
+import Layout from './Layout/Layout';
 
-function App() {
+// Code Splitting (разделение кода)
+const HomePage = lazy(() => import('../pages/HomePage'));
+const RegisterPage = lazy(() => import('../pages/RegisterPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage'));
+const ContactsPage = lazy(() => import('../pages/ContactsPage'));
+
+const App = () => {
   return (
-    <Container>
-      <HeroTitle>
-        Phonebook <RiContactsBookLine />
-      </HeroTitle>
-      <ContactForm />
-
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </Container>
+    <div>
+      <Suspense fallback>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route path="contacts" element={<ContactsPage />} />
+          </Route>
+          <Route path="*" element={<Navigate to={'/'} />} />
+        </Routes>
+      </Suspense>
+    </div>
   );
-}
+};
 
 export default App;
