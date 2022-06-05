@@ -1,14 +1,24 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.35aad1f2.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.5a629bc8.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.dc721b77.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.028c5522.js",
+    "static/js/206.79c22e67.chunk.js": "/goit-react-hw-08-phonebook/static/js/206.79c22e67.chunk.js",
+    "static/js/50.1d50b6da.chunk.js": "/goit-react-hw-08-phonebook/static/js/50.1d50b6da.chunk.js",
+    "static/js/588.e9846613.chunk.js": "/goit-react-hw-08-phonebook/static/js/588.e9846613.chunk.js",
+    "static/js/296.936f9727.chunk.js": "/goit-react-hw-08-phonebook/static/js/296.936f9727.chunk.js",
+    "static/css/544.606738ce.chunk.css": "/goit-react-hw-08-phonebook/static/css/544.606738ce.chunk.css",
     "static/media/backgrounds-blank-blue.jpg": "/goit-react-hw-08-phonebook/static/media/backgrounds-blank-blue.3d2c44e3c3326cc3158c.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.35aad1f2.css.map": "/goit-react-hw-08-phonebook/static/css/main.35aad1f2.css.map",
-    "main.5a629bc8.js.map": "/goit-react-hw-08-phonebook/static/js/main.5a629bc8.js.map"
+    "main.dc721b77.css.map": "/goit-react-hw-08-phonebook/static/css/main.dc721b77.css.map",
+    "main.028c5522.js.map": "/goit-react-hw-08-phonebook/static/js/main.028c5522.js.map",
+    "206.79c22e67.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/206.79c22e67.chunk.js.map",
+    "50.1d50b6da.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/50.1d50b6da.chunk.js.map",
+    "588.e9846613.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/588.e9846613.chunk.js.map",
+    "296.936f9727.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/296.936f9727.chunk.js.map",
+    "544.606738ce.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/544.606738ce.chunk.css.map"
   },
   "entrypoints": [
-    "static/css/main.35aad1f2.css",
-    "static/js/main.5a629bc8.js"
+    "static/css/main.dc721b77.css",
+    "static/js/main.028c5522.js"
   ]
 }
