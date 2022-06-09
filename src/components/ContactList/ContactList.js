@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { List } from './ContactList.styled';
 import ContactItem from '../ContactItem/ContactItem';
-import { useGetContactsQuery } from '../../services/contacts-api';
+import { useGetContactsQuery } from '../../redux/contacts-api';
 
 const ContactList = () => {
   const { data: contacts, isFetching } = useGetContactsQuery();

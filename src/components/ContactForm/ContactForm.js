@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {
   contactsApi,
   useCreateContactMutation,
-} from '../../services/contacts-api';
+} from '../../redux/contacts-api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Form, Label, Input, Button } from './ContactForm.styled';
@@ -14,22 +14,19 @@ function ContactForm() {
   const useContactState =
     contactsApi.endpoints.getContacts.useQueryState().data;
 
-  const handleChange = ({ target }) => {
-    const { name, value } = target;
+  const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':
         return setName(value);
-
       case 'number':
         return setNumber(value);
-
       default:
         return;
     }
   };
 
   // Добавление контакта, проверка на повторение имени
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     const contact = {

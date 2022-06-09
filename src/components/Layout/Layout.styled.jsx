@@ -2,7 +2,9 @@ import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const Nav = styled.nav`
-  padding: 1rem 0 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.3);
 `;
@@ -12,9 +14,10 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration-line: none;
   font-size: 20px;
   font-weight: 500;
+  color: aliceblue;
 
   &:nth-of-type(-n + 3) {
-    margin-right: 20px;
+    margin-right: 25px;
   }
 
   &:visited {

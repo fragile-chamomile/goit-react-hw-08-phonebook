@@ -1,9 +1,9 @@
-import { Container, HeroTitle } from '../pages/ContactsPage.styled';
+import { Container, HeroTitle } from './ContactsPage.styled';
 import { RiContactsBookLine } from 'react-icons/ri';
 
-import ContactForm from '../components/ContactForm/ContactForm';
-import Filter from '../components/Filter/Filter';
-import ContactList from '../components/ContactList/ContactList';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import Filter from '../../components/Filter/Filter';
+import ContactList from '../../components/ContactList/ContactList';
 
 function Contacts() {
   return (
