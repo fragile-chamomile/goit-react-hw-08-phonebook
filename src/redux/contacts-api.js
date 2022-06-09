@@ -11,9 +11,6 @@ export const contactsApi = createApi({
       if (token) {
         headers.set('authorization', `Bearer ${token}`);
       }
-      if (!token) {
-        headers.unset('authorization', `Bearer ${token}`);
-      }
       return headers;
     },
   }),
