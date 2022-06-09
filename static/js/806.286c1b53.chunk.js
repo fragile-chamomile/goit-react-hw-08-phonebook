@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[806],{3806:function(e,t,n){n.r(t);var a=n(3329);t.default=function(){return(0,a.jsx)("div",{style:{margin:"20vmin auto 0",width:"400px",textAlign:"center"},children:(0,a.jsx)("p",{style:{fontSize:"30px"},children:"Private app to save contacts"})})}}}]);
+//# sourceMappingURL=806.286c1b53.chunk.js.map
