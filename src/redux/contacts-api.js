@@ -21,6 +21,8 @@ export const contactsApi = createApi({
         url: '/contacts',
         method: 'GET',
       }),
+      refetchOnReconnect: true,
+      refetchOnFocus: true,
       providesTags: ['Contact'],
     }),
     createContact: builder.mutation({

@@ -20,7 +20,7 @@ function Login() {
   };
 
   const handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
     dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');

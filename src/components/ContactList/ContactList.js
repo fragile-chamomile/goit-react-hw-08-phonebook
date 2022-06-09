@@ -4,7 +4,8 @@ import ContactItem from '../ContactItem/ContactItem';
 import { useGetContactsQuery } from '../../redux/contacts-api';
 
 const ContactList = () => {
-  const { data: contacts, isFetching } = useGetContactsQuery();
+  const userName = useSelector(state => state.auth.user.name);
+  const { currentData: contacts, isFetching } = useGetContactsQuery(userName);
   const filterSelector = useSelector(state => state.filter);
 
   // // Фильтрация списка контактов
