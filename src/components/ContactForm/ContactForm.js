@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
-  // contactsApi,
   useCreateContactMutation,
+  useGetContactsQuery,
 } from '../../redux/contacts-api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,8 +11,7 @@ function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [createContact, { isLoading }] = useCreateContactMutation();
-  // const useContactState =
-  //   contactsApi.endpoints.getContacts.useQueryState().data;
+  const { data } = useGetContactsQuery();
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -34,15 +33,15 @@ function ContactForm() {
       number: e.currentTarget.elements.number.value,
     };
 
-    // const dublicateName = useContactState.find(contact => {
-    //   return contact.name.toLowerCase() === name.toLowerCase();
-    // });
+    const dublicateName = data.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
 
-    // if (dublicateName) {
-    //   setName('');
-    //   setNumber('');
-    //   return alert(`${contact.name} is already in contacts.`);
-    // }
+    if (dublicateName) {
+      setName('');
+      setNumber('');
+      return alert(`${contact.name} is already in contacts.`);
+    }
 
     createContact(contact);
     toast.success('You added a new contact!', { theme: 'colored' });
